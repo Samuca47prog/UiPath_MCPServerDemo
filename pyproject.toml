@@ -14,10 +14,12 @@ dependencies = [
     "uipath-mcp>=0.0.106",
 ]
 
-
 [project.scripts]
 demo-server = "demo_server.server:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
 packages = ["demo_server"]
+
+[tool.pytest.ini_options]
+addopts = "-s -v"
