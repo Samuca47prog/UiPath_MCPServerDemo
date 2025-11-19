@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "demo-server"
+version = "0.0.1"
+description = "Description for demo-server project"
+authors = [{ name = "Samuel Simão", email = "samuel.simao@uipath.com" }]
+requires-python = ">=3.11"
+dependencies = [
+    "pytest>=9.0.1",
+    "python-dotenv>=1.2.1",
+    "uipath-mcp>=0.0.106",
+]
+
+
+[project.scripts]
+demo-server = "demo_server.server:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["demo_server"]
